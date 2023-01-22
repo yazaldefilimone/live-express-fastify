@@ -1,6 +1,4 @@
-/* tslint:disable:no-console */
-import './settings/alias';
-import { app } from '~/main/settings/app';
-import { env } from '~/shared/env';
+import { app } from './fastify/app';
 
-app.listen(env.port, () => console.log(`🎯 server running at: ${env.port}`));
+const port = 3003;
+app.listen(port, () => console.log(`Server Running at ${port}`));

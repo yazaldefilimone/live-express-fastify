@@ -1,14 +1,10 @@
-import { Either } from '~/shared/either';
-import { userType, userStoreType } from '~/domain/user/dtos';
-import { InvalidParamError, InternalServerError } from '~/domain/errors';
-import { AlreadyExistsError } from '~/domain/errors/already-exists-error';
+import { userDtos } from '../dtos';
 
 export interface ISignUserUseCase {
-  perform: (input: ISignUserUseCase.Input) => ISignUserUseCase.Output;
+  execute: (data: ISignUserUseCase.Input) => Promise<ISignUserUseCase.OutPut>;
 }
 
-type signUserUseCaseFailed = InvalidParamError | InternalServerError | AlreadyExistsError;
 export namespace ISignUserUseCase {
-  export type Input = userType;
-  export type Output = Promise<Either<signUserUseCaseFailed, { id: string }>>;
+  export type Input = userDtos;
+  export type OutPut = { id: string };
 }

@@ -44,7 +44,6 @@
     "@types/node": "^18.8.3",
     "@vitest/coverage-c8": "^0.24.3",
     "husky": "^7.0.2",
-    "jest-mock-extended": "^2.0.1",
     "lint-staged": "^11.1.2",
     "prettier": "^2.7.1",
     "prisma": "^4.4.0",
@@ -59,9 +58,12 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.1",
+    "fastify": "^4.12.0",
     "helmet": "^6.0.0",
     "joi": "^17.6.2",
     "module-alias": "^2.2.2",
+    "tsup": "^6.5.0",
+    "tsx": "^3.12.2",
     "vite-tsconfig-paths": "^3.5.1"
   }
 }

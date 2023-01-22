@@ -1,18 +1,14 @@
-export type userType = {
-  name: string
-  email: string
-  password: string
-}
+export type userDtos = {
+  email: string;
+  password: string;
+};
 
-export type userLoginType = {
-  email: string
-  password: string
-}
-
-export type userStoreType = {
-  id: string
-  email: string
-  password: string
-  createdAt: string
-  updateAt: string
-}
+export type userStoreDtos = {
+  id: string;
+  updatedAt: string | Date;
+  createdAt: string | Date;
+} & userDtos;
+export type userEntityDtos = {
+  id: string;
+  createdAt: string | Date;
+} & userDtos;
